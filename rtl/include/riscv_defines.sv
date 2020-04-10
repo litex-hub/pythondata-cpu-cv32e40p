@@ -25,6 +25,10 @@
 
 package riscv_defines;
 
+import fpnew_pkg::OP_BITS;
+import fpnew_pkg::FP_FORMAT_BITS;
+import fpnew_pkg::INT_FORMAT_BITS;
+
 ////////////////////////////////////////////////
 //    ___         ____          _             //
 //   / _ \ _ __  / ___|___   __| | ___  ___   //
