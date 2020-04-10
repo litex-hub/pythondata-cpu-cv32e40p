@@ -26,10 +26,14 @@
 //`define SYNTHESIS
 
 +incdir+${DESIGN_RTL_DIR}/include
++incdir+${DESIGN_RTL_DIR}/fpnew/src/common_cells/include/
 
+${DESIGN_RTL_DIR}/include/apu_macros.sv
 ${DESIGN_RTL_DIR}/include/apu_core_package.sv
 //NOTE: Makefiles are required to clone fpnew from https://github.com/pulp-platform/fpnew
+${DESIGN_RTL_DIR}/fpnew/src/common_cells/include/common_cells/registers.svh
 ${DESIGN_RTL_DIR}/fpnew/src/fpnew_pkg.sv
+${DESIGN_RTL_DIR}/include/riscv_config.sv
 ${DESIGN_RTL_DIR}/include/riscv_defines.sv
 ${DESIGN_RTL_DIR}/include/riscv_tracer_defines.sv
 ${DESIGN_RTL_DIR}/riscv_if_stage.sv
