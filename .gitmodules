@@ -1,0 +1,3 @@
+[submodule "rtl/fpnew"]
+	path = rtl/fpnew
+	url = https://github.com/antmicro/fpnew.git
