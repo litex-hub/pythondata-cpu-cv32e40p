@@ -125,6 +125,16 @@ module riscv_core
   // Debug Interface
   input  logic        debug_req_i,
 
+  // Trace Debugger Interface
+  output logic        ivalid_o,
+  output logic        iexception_o,
+  output logic        interrupt_o,
+  output logic [ 4:0] cause_o,
+  output logic [31:0] tval_o,
+  output logic [ 2:0] priv_o,
+  output logic [31:0] iaddr_o,
+  output logic [31:0] instr_o,
+  output logic        compressed_o,
 
   // CPU Control Signals
   input  logic        fetch_enable_i,
@@ -360,6 +370,14 @@ module riscv_core
   // interrupt signals
   logic        irq_pending;
   logic [5:0]  irq_id;
+
+  // trace signals
+  logic        illegal_insn;
+  logic        ebrk_insn;
+  logic        mret_insn;
+  logic        uret_insn;
+  logic        ecall_insn;
+  logic        pipe_flush;
 
   //Simchecker signal
   logic is_interrupt;
@@ -1150,6 +1168,21 @@ module riscv_core
   end
   endgenerate
 
+  assign pipe_flush = id_stage_i.controller_i.pipe_flush_i;
+  assign mret_insn = id_stage_i.controller_i.mret_insn_i;
+  assign uret_insn = id_stage_i.controller_i.uret_insn_i;
+  assign ecall_insn = id_stage_i.controller_i.ecall_insn_i;
+  assign ebrk_insn = id_stage_i.controller_i.ebrk_insn_i;
+
+  assign ivalid_o = ((id_valid || pipe_flush || mret_insn || uret_insn || ecall_insn || ebrk_insn) && is_decoding) || csr_cause[5];
+  assign iexception_o = csr_cause[5] | ecall_insn | ebrk_insn | illegal_insn;
+  assign interrupt_o = csr_cause[5];
+  assign cause_o = exc_cause[4:0];
+  assign tval_o = '0;
+  assign priv_o = '1;
+  assign iaddr_o = pc_id;
+  assign instr_o = instr_rdata_id;
+  assign compressed_o = is_compressed_id;
 
 `ifndef VERILATOR
 `ifdef TRACE_EXECUTION

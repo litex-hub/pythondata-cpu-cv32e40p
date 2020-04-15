@@ -1,0 +1,14 @@
+${DESIGN_RTL_DIR}/riscv-dbg/src/dm_pkg.sv
+${DESIGN_RTL_DIR}/riscv-dbg/debug_rom/debug_rom.sv
+${DESIGN_RTL_DIR}/riscv-dbg/src/dm_csrs.sv
+${DESIGN_RTL_DIR}/riscv-dbg/src/dm_mem.sv
+${DESIGN_RTL_DIR}/riscv-dbg/src/dm_top.sv
+${DESIGN_RTL_DIR}/riscv-dbg/src/dm_wrap.sv
+${DESIGN_RTL_DIR}/riscv-dbg/src/dmi_cdc.sv
+${DESIGN_RTL_DIR}/riscv-dbg/src/dmi_jtag.sv
+${DESIGN_RTL_DIR}/riscv-dbg/src/dmi_jtag_tap.sv
+${DESIGN_RTL_DIR}/riscv-dbg/src/dm_sba.sv
+${DESIGN_RTL_DIR}/fpnew/src/common_cells/src/deprecated/fifo_v2.sv
+${DESIGN_RTL_DIR}/fpnew/src/common_cells/src/fifo_v3.sv
+${DESIGN_RTL_DIR}/fpnew/src/common_cells/src/cdc_2phase.sv
+
