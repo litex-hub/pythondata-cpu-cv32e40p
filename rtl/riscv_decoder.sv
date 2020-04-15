@@ -28,6 +28,12 @@
 `include "apu_macros.sv"
 
 import riscv_defines::*;
+import apu_core_package::APU_FLAGS_FP;
+import apu_core_package::APU_FLAGS_FPNEW;
+import apu_core_package::PIPE_REG_ADDSUB;
+import apu_core_package::PIPE_REG_MULT;
+import apu_core_package::PIPE_REG_CAST;
+import apu_core_package::PIPE_REG_MAC;
 
 module riscv_decoder
 #(
@@ -723,7 +729,7 @@ module riscv_decoder
               // using APU instead of ALU
               apu_en           = 1'b1;
               alu_en_o         = 1'b0;
-              apu_flags_src_o  = apu_core_package::APU_FLAGS_FPNEW;
+              apu_flags_src_o  = APU_FLAGS_FPNEW;
               // by default, set all registers to FP registers and use 2
               rega_used_o      = 1'b1;
               regb_used_o      = 1'b1;
@@ -1306,7 +1312,7 @@ module riscv_decoder
           apu_en           = 1'b1;
           alu_en_o         = 1'b0;
           // Private and new shared FP use FPnew
-          apu_flags_src_o  = (SHARED_FP==1) ? apu_core_package::APU_FLAGS_FP : apu_core_package::APU_FLAGS_FPNEW;
+          apu_flags_src_o  = (SHARED_FP==1) ? APU_FLAGS_FP : APU_FLAGS_FPNEW;
           // by default, set all registers to FP registers and use 2
           rega_used_o      = 1'b1;
           regb_used_o      = 1'b1;
@@ -1797,7 +1803,7 @@ module riscv_decoder
           apu_en           = 1'b1;
           alu_en_o         = 1'b0;
           // Private and new shared FP use FPnew
-          apu_flags_src_o  = (SHARED_FP==1) ? apu_core_package::APU_FLAGS_FP : apu_core_package::APU_FLAGS_FPNEW;
+          apu_flags_src_o  = (SHARED_FP==1) ? APU_FLAGS_FP : APU_FLAGS_FPNEW;
           apu_type_o       = APUTYPE_MAC;
           apu_lat_o        = (PIPE_REG_MAC>1) ? 2'h3 : 2'h2;
           // all registers are FP registers and use three
