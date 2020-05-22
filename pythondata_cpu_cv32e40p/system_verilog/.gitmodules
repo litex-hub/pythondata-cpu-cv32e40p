@@ -1,0 +1,9 @@
+[submodule "rtl/fpnew"]
+	path = rtl/fpnew
+	url = https://github.com/antmicro/fpnew.git
+[submodule "rtl/riscv-dbg"]
+	path = rtl/riscv-dbg
+	url = https://github.com/antmicro/riscv-dbg.git
+[submodule "rtl/trace_debugger"]
+	path = rtl/trace_debugger
+	url = https://github.com/antmicro/trace_debugger.git

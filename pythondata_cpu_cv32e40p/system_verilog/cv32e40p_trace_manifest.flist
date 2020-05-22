@@ -1,0 +1,17 @@
++incdir+${DESIGN_RTL_DIR}/trace_debugger/include
+
+${DESIGN_RTL_DIR}/trace_debugger/include/trdb_pkg.sv
+${DESIGN_RTL_DIR}/trace_debugger/rtl/trace_debugger.sv
+${DESIGN_RTL_DIR}/trace_debugger/rtl/tracer_if.sv
+${DESIGN_RTL_DIR}/trace_debugger/rtl/tracer_reg_if.sv
+${DESIGN_RTL_DIR}/trace_debugger/rtl/trdb_apb_if.sv
+${DESIGN_RTL_DIR}/trace_debugger/rtl/trdb_branch_map.sv
+${DESIGN_RTL_DIR}/trace_debugger/rtl/trdb_packet_emitter.sv
+${DESIGN_RTL_DIR}/trace_debugger/rtl/trdb_priority.sv
+${DESIGN_RTL_DIR}/trace_debugger/rtl/trdb_reg.sv
+${DESIGN_RTL_DIR}/trace_debugger/rtl/trdb_align.sv
+${DESIGN_RTL_DIR}/trace_debugger/rtl/trdb_align8.sv
+${DESIGN_RTL_DIR}/trace_debugger/rtl/trdb_timer.sv
+${DESIGN_RTL_DIR}/trace_debugger/rtl/trdb_filter.sv
+${DESIGN_RTL_DIR}/trace_debugger/rtl/trdb_lzc.sv
+${DESIGN_RTL_DIR}/fpnew/src/common_cells/src/deprecated/generic_fifo_adv.sv
