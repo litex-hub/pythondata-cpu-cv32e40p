@@ -1,0 +1,9 @@
+[submodule "rtl/fpnew"]
+	path = pythondata_cpu_cv32e40p/system_verilog/rtl/fpnew
+	url = https://github.com/antmicro/fpnew.git
+[submodule "rtl/riscv-dbg"]
+	path = pythondata_cpu_cv32e40p/system_verilog/rtl/riscv-dbg
+	url = https://github.com/antmicro/riscv-dbg.git
+[submodule "rtl/trace_debugger"]
+	path = pythondata_cpu_cv32e40p/system_verilog/rtl/trace_debugger
+	url = https://github.com/antmicro/trace_debugger.git
