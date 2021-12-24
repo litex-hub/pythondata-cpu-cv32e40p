@@ -4,11 +4,11 @@ data_location = os.path.join(__dir__, "system_verilog")
 src = "https://github.com/antmicro/cv32e40p"
 
 # Module version
-version_str = "0.0.post123"
-version_tuple = (0, 0, 123)
+version_str = "0.0.post127"
+version_tuple = (0, 0, 127)
 try:
     from packaging.version import Version as V
-    pversion = V("0.0.post123")
+    pversion = V("0.0.post127")
 except ImportError:
     pass
 
@@ -32,11 +32,11 @@ Date:   Wed May 20 14:40:57 2020 +0200
 """
 
 # Tool version info
-tool_version_str = "0.0.post113"
-tool_version_tuple = (0, 0, 113)
+tool_version_str = "0.0.post117"
+tool_version_tuple = (0, 0, 117)
 try:
     from packaging.version import Version as V
-    ptool_version = V("0.0.post113")
+    ptool_version = V("0.0.post117")
 except ImportError:
     pass
 
