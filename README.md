@@ -37,9 +37,11 @@ and are imported using `git subtrees` to the directory
 
 
 
-## Installing from git repository
+# Installing
 
-## Manually
+## Directly from git repository
+
+### Manually
 
 You can install the package manually, however this is **not** recommended.
 
@@ -49,7 +51,7 @@ cd pythondata-cpu-cv32e40p
 sudo python setup.py install
 ```
 
-## Using [pip](https://pip.pypa.io/) with git repository
+### Using [pip](https://pip.pypa.io/) with git repository
 
 You can use [pip](https://pip.pypa.io/) to install the data package directly
 from github using;
@@ -84,10 +86,17 @@ To use a specific revision of the repository, use the following;
 -e https://github.com/litex-hub/pythondata-cpu-cv32e40p.git@<hash>
 ```
 
-## Installing from [PyPi](https://pypi.org/project/pythondata-cpu-cv32e40p/)
+## Via [PyPi](https://pypi.org/project/pythondata-cpu-cv32e40p/)
 
-## Using [pip](https://pip.pypa.io/)
+### Using [pip](https://pip.pypa.io/)
 
 ```
 pip install --user pythondata-cpu-cv32e40p
+```
+
+### With `requirements.txt` file
+
+Add to your Python `requirements.txt` file using;
+```
+pythondata-cpu-cv32e40p
 ```
